@@ -19,3 +19,32 @@
 # Cada alumno tendrá un total de 5(cinco) intentos disponibles hasta subir las respuestas correctas. Cuando haya agotado las cinco posibilidades, o bien si logra registrar las respuestas correctas antes de usar sus cinco intentos, entonces la nota final que le corresponderá por este desafío será la mayor nota que haya obtenido en los intentos que haya usado.
 
 # Cuando haya vencido la fecha final para realizar este desafío, será publicada en el aula virtual la solución de programación sugerida por los profesores (es decir, será publicado el programa Python para resolver el problema).
+
+
+# TODO  Desarrolle un programa o script Python que permita cargar por teclado un número entero que representa la  cantidad de segundos que pasaron desde un evento dado.  El programa debe convertir esa cantidad de segundos  a la cantidad de horas, minutos y segundos que transcurrieron. Por ejemplo, si la cantidad de segundos  ingresada es 4452 deberá mostrar un mensaje que informe que el tiempo transcurrido fue de 1 hora, 14 minutos  y 12 segundos.
+
+# TODO*  Además, el desafío incluye al final una quinta consigna o pregunta adicional, en la cual se le pedirá hacer un programa que haga el proceso inverso: deberá tomar tres datos, que serán el valor en horas, el valor en minutos y el valor en segundos transcurridos desde un evento dado, y su programa deberá calcular la cantidad total de segundos a partir de esos datos. Por ejemplo, si los datos ingresados fuesen: horas = 4, minutos = 36 y segundos = 8 entonces el resultado a obtener es que la cantidad total de segundos es 16568.
+
+
+segs = int(input("Ingrese la cantidad de segundos: "))
+
+horas = segs//3600
+segs = segs % 3600
+minutos = segs // 60
+segs = segs % 60
+
+
+print('La cantidad de horas es: ', horas, '\nLa cantidad de minutos es: ',
+      minutos, '\nLa cantidad de segundos es: ', segs)
+
+
+hours = int(input('Ingrese las horas transcurridas: '))
+minutes = int(input('Ingrese los minutos transcurridos: '))
+secods = int(input('Ingrese los segundos transcurridos: '))
+
+
+a = hours * 3600
+b = minutes * 60
+c = secods
+
+print('La cantidad de segundos transcurridos es: ', a + b + c)
