@@ -6,6 +6,8 @@ n1, n2, n3 = input('Please, enter three numbers: ').split()
 def mayor(n1, n2, n3):
     if n1 > n2 > n3:
         print('The first number is higher than n2 and n3', n1)
+    elif n1 == n2 == n3:
+        print('The numbers are equal')
     else:
         print('The n2 and n3 are higher than n1', n2, n3)
 
