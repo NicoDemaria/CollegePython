@@ -44,9 +44,19 @@ if cuadro3 == cuadro1:
 elif cuadro3 == cuadro2:
     print('El cuadro 3 se creo en el mismo ano que el cuadro 2')
 else:
-    print('El ano de el cuadro 3 es  diferentes')
+    print('Los anos de los cuadros son diferentes')
 
 
+minimoCuadro = (min(cuadro1,
+          cuadro2,
+          cuadro3
+          ))
+maximoCuadro = (max(cuadro1,
+          cuadro2,
+          cuadro3
+          ))
+difCuadros = maximoCuadro - minimoCuadro
+print(difCuadros)
 
 
 
