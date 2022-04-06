@@ -17,3 +17,5 @@ else:
         print('se le cobrará $500 más el kilometraje excedente a los 300, a razón de $1.5 por kilómetro.', multa2 + 500)
 
 print('Fin de el programa pague por favor!.')
+
+
