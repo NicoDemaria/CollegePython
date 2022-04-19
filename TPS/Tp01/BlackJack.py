@@ -97,3 +97,10 @@ if sumaCrupier >= 17 and sumaJugador >= 17:
         print('El jugador gana')
     else:
         print('Empate')
+
+
+# if cartasJugador0 == 'j' or cartasJugador0 == 'q' or cartasJugador0 == 'k' or cartasJugador0 == 'as' or cartasJugador1 == 'j' or cartasJugador1 == 'q' or cartasJugador1 == 'k' or cartasJugador1 == 'as' or cartasJugador2 == 'j' or cartasJugador2 == 'q' or cartasJugador2 == 'k' or cartasJugador2 == 'as' or cartasJugador3 == 'j' or cartasJugador3 == 'q' or cartasJugador3 == 'k' or cartasJugador3 == 'as':
+#     print('Hay al menos una figura')
+
+# if cartasCrupier0 == 'j' or cartasCrupier0 == 'q' or cartasCrupier0 == 'k' or cartasCrupier0 == 'as' or cartasCrupier1 == 'j' or cartasCrupier1 == 'q' or cartasCrupier1 == 'k' or cartasCrupier1 == 'as' or cartasCrupier2 == 'j' or cartasCrupier2 == 'q' or cartasCrupier2 == 'k' or cartasCrupier2 == 'as' or cartasCrupier3 == 'j' or cartasCrupier3 == 'q' or cartasCrupier3 == 'k' or cartasCrupier3 == 'as':
+#     print('Hay al menos una figura')
