@@ -86,23 +86,9 @@ print("\nLa suma de sus cartas es:", sumaJugador)
 # Parte logica
 print("---------\n")
 # Toma de cartas si <=16
-
+input("Presione enter para tomar \n")
 # -----------------------------------------------------
 
-if sumaCrupier <= 16:
-    print("El crupier tiene menos de 16, pide una carta.")
-
-    palosRandom = random.choice(palos)
-    cartasCrupier2 = random.choice(deck)
-
-    print("La carta es:", cartasCrupier2, " de ", palosRandom)
-    if cartasCrupier2 == "j" or cartasCrupier2 == "q" or cartasCrupier2 == "k":
-        cartasCrupier2 = 10
-        figura = True
-    elif cartasCrupier2 == "as":
-        cartasCrupier2 = 11
-
-    sumaCrupier += cartasCrupier2
 # -----------------------------------------------------
 if sumaCrupier <= 16:
     print("El crupier tiene menos de 16, pide una carta.")
@@ -135,20 +121,6 @@ if sumaJugador <= 16:
 
     sumaJugador += cartasJugador2
 # -----------------------------------------------------
-if sumaJugador <= 16:
-    print("El Jugador tiene menos de 16, pide una carta.")
-
-    palosRandom = random.choice(palos)
-    cartasJugador3 = random.choice(deck)
-
-    print("La carta es:", cartasJugador3, " de ", palosRandom)
-    if cartasJugador3 == "j" or cartasJugador3 == "q" or cartasJugador3 == "k":
-        cartasJugador3 = 10
-        figura = True
-    elif cartasJugador3 == "as":
-        cartasJugador3 = 11
-
-    sumaJugador += cartasJugador3
 
 
 print('\nLa suma de las cartas del crupier es:', sumaCrupier,
