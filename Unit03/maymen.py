@@ -1,1 +1,0 @@
-# Determinar el mayor valor de una sucesión de valores que se cargan por teclado. Asuma en primera instancia que la cantidad n de números a procesar se conoce de antemano. Y luego de resolverlo con esa suposición, replantee su solución asumiendo que la cantidad n de números se desconoce y que la carga de datos terminará cuando se ingrese un 0.
