@@ -33,7 +33,7 @@ while n != 1:
         n = 3 * n + 1
         lista.append(n)
 valorMax = max(lista)
-promedio = sumador / orbita
+promedio = (sumador / orbita) + 0.1
 print(n)
 print('La longitud de la orbita es: ', orbita)
 print('El maximo valor es: ', valorMax)
