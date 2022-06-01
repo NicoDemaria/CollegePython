@@ -1,9 +1,26 @@
 import random
-
 # Datos => numero de la carta , palos
 print("---------\nBienvenido a BlackJack\n---------")
+# blackjack2.0
+nombreJugador = input("Ingrese su nombre: ")
+pozo = int(input("Ingrese tu pozo: $"))
+while pozo > 100000 and pozo > 0:
+    print("El pozo no puede ser mayor a $100.000")
+    pozo = int(input("Ingrese un nuevo pozo: $"))
 
-# Generacion de cartas del crupier
+print(pozo)
+# =========================================================
+# Menu
+menuSelec = int(input('\n1. Apostar\n2. Jugar \n 3. Salir \n'))
+while True:
+
+    apuesta = 0
+    ingresoApuesta = int(input('Ingrese la apuesta: $'))
+    if menuSelec < 1 or menuSelec > 3:
+        print('Ingrese una opcion valida')
+        menuSelec = int(input('\n1. Apostar\n2. Jugar \n 3. Salir \n'))
+        # =========================================================
+        # Generacion de cartas del crupier
 palos = ("Corazones", "Diamantes", "Treboles", "Picas")
 palosRandom0 = random.choice(palos)
 palosRandom1 = random.choice(palos)
