@@ -38,3 +38,41 @@ print(n)
 print('La longitud de la orbita es: ', orbita)
 print('El maximo valor es: ', valorMax)
 print('El promedio es: ', promedio)
+
+
+# Quiero hacer una calculadora simpple, que me permita sumar, restar, multiplicar y dividir dos numeros.
+
+def sumar(a, b):
+    return a + b
+
+
+def restar(a, b):
+    return a - b
+
+
+def dividir(a, b):
+    return a / b
+
+
+def multiplicar(a, b):
+    return a * b
+
+
+def main():
+    try:
+        a = int(input("Ingrese el primer numero: "))
+        b = int(input("Ingrese el segundo numero: "))
+        opcion = input("Ingrese la opcion que desea realizar: ")
+        if opcion == "s":
+            print(sumar(a, b))
+        elif opcion == "r":
+            print(restar(a, b))
+        elif opcion == "d":
+            print(dividir(a, b))
+        elif opcion == "m":
+            print(multiplicar(a, b))
+        else:
+            print("Opcion no valida")
+    except Exception as e:
+        print("Error: ", e)
+        print_tb(e.__traceback__)

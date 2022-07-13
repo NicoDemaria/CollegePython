@@ -17,7 +17,11 @@
 # Determinar cuántas palabras contuvieron sólo una vez la expresión "mo": 1
 
 
-cadenaCaracteres = str(input('Ingrese un texto: '))
-contadorCadenas = 0
-for i in cadenaCaracteres:
-    if i.__len__\
+def main():
+
+    texto = input(str('Ingrese un texto:'))
+    contadorLetras = 0
+    contadorPalabras = 0
+    for letra in texto:
+        if letra != ' ' and letra != '.':
+            contadorLetras += 1
