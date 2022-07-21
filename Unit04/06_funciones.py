@@ -12,6 +12,7 @@ def primos(num):
             print("No es primo", n, "es divisor")
             return False
     print("Es primo")
+    
     return True
 
 
