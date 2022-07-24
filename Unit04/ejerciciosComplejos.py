@@ -36,11 +36,14 @@ def validarDesc(descripcion):
             else:
                 if (car >= 'A' and car <= 'Z') and (anterior >= 'A' and anterior <= 'Z'):
                     mayusSeguidas = True
+                    print('Por favor no ingrese dos mayus seguidas')
 
             anterior = car
-        if palabras <= 3:
+        if palabras >= 3:
             if mayusSeguidas == False:
                 valido = True
+        else:
+            print('Ingrese una desc con mas de 3 palabras')
 
     else:
         print('Ingrese una cadena con menos de 60 digitos')
