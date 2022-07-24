@@ -58,30 +58,37 @@ def valisarSalario(salario):
 
 
 def main():
-    # Datos de entrada
-    cuit = input('Ingrese el CUIT: ')
-    descripcion = input('Ingrese la descripción de la búsqueda: ')
-    salario = int(input('Ingrese el salario ofrecido: '))
+    rsp = (input('Desea cargar un aviso (y/n)'))
 
-    # Procesos
+    while rsp == 'y':
+        # Datos de entrada
+        cuit = input('Ingrese el CUIT: ')
+        descripcion = input('Ingrese la descripción de la búsqueda: ')
+        salario = int(input('Ingrese el salario ofrecido: '))
 
-    cuitValido = validar_cuit(cuit)
-    descValido = validarDesc(descripcion)
-    SalarioValido = valisarSalario(salario)
+        # Procesos
 
-    # Output
-    print('='*80)
-    if cuitValido and descValido and SalarioValido:
-        print('Todos los datos son validos')
-        print('Empleado:', cuit)
-        print('Desc:', descripcion)
-        print('Salario:', salario)
+        cuitValido = validar_cuit(cuit)
+        descValido = validarDesc(descripcion)
+        SalarioValido = valisarSalario(salario)
 
-    else:
-        print('Alguno de los datos no son validos, no se puede mostrar ')
+        # Output
+        print('='*80)
+        if cuitValido and descValido and SalarioValido:
+            print('Todos los datos son validos')
+            print('Empleado:', cuit)
+            print('Desc:', descripcion)
+            print('Salario:', salario)
 
-    print('='*80)
+        else:
+            print('Alguno de los datos no son validos, no se puede mostrar la busqueda ')
+
+        print('='*80)
+        # consultar al usuario si desea cargar otro aviso o salir del programa.
+        rsp = (input('Desea cargar otro aviso (y/n)'))
+        if rsp == 'n':
+            print('Gracias por cargar el aviso!')
 
 
-#
+    #
 main()
