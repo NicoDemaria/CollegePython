@@ -24,6 +24,9 @@ def validar_cuit(cuit):
     return valido
 
 
+def validarDesc(descripcion):
+
+
 def main():
     # Datos de entrada
     cuit = input('Ingrese el CUIT: ')
