@@ -25,8 +25,8 @@ def validar_cuit(cuit):
 
 
 def validarDesc(descripcion):
-
-    print
+    valido = True
+    if len(descripcion) >= 60:
 
 
 def main():
@@ -42,6 +42,7 @@ def main():
     SalarioValido = True
 
     # Output
+    print('='*80)
     if cuitValido and descValido and SalarioValido:
         print('Todos los datos son validos')
         print('Empleado:', cuit)
@@ -50,6 +51,8 @@ def main():
 
     else:
         print('Alguno de los datos no son validos, no se puede mostrar ')
+
+    print('='*80)
 
 
 #
