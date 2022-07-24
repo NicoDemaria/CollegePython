@@ -41,8 +41,7 @@ def validarDesc(descripcion):
         if palabras <= 3:
             if mayusSeguidas == False:
                 valido = True
-        else:
-            print('Por favor ingrese 3 o mas palabras')
+
     else:
         print('Ingrese una cadena con menos de 60 digitos')
     return valido
