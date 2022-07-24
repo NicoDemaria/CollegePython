@@ -34,7 +34,7 @@ def validarDesc(descripcion):
             if car == ' ' or car == '.':
                 palabras += 1
             else:
-                if car >= 'A' and car <= 'Z' and anterior >= 'A' and anterior <= 'Z':
+                if (car >= 'A' and car <= 'Z') and (anterior >= 'A' and anterior <= 'Z'):
                     mayusSeguidas = True
 
             anterior = car
