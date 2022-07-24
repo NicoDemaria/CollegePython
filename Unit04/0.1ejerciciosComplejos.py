@@ -53,13 +53,15 @@ def validarDesc(descripcion):
 def valisarSalario(salario):
     if salario > 0:
         return True
+    else:
+        print('Por favor ingrese un salario valido')
 
 
 def main():
     # Datos de entrada
     cuit = input('Ingrese el CUIT: ')
     descripcion = input('Ingrese la descripción de la búsqueda: ')
-    salario = input('Ingrese el salario ofrecido: ')
+    salario = int(input('Ingrese el salario ofrecido: '))
 
     # Procesos
 
