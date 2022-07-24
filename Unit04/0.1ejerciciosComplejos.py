@@ -50,6 +50,11 @@ def validarDesc(descripcion):
     return valido
 
 
+def valisarSalario(salario):
+    if salario > 0:
+        return True
+
+
 def main():
     # Datos de entrada
     cuit = input('Ingrese el CUIT: ')
@@ -60,7 +65,7 @@ def main():
 
     cuitValido = validar_cuit(cuit)
     descValido = validarDesc(descripcion)
-    SalarioValido = True
+    SalarioValido = valisarSalario(salario)
 
     # Output
     print('='*80)
