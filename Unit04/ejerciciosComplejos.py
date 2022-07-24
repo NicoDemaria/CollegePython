@@ -26,6 +26,8 @@ def validar_cuit(cuit):
 
 def validarDesc(descripcion):
 
+    print
+
 
 def main():
     # Datos de entrada
@@ -36,7 +38,7 @@ def main():
     # Procesos
 
     cuitValido = validar_cuit(cuit)
-    descValido = True
+    descValido = validarDesc(descripcion)
     SalarioValido = True
 
     # Output
