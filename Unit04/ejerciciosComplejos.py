@@ -28,6 +28,7 @@ def validarDesc(descripcion):
     valido = False
     palabras = 0
     mayusSeguidas = False
+    anterior = ''
     if len(descripcion) <= 60:
         for car in descripcion:
             if car == ' ' or car == '.':
