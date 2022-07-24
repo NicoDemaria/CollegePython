@@ -25,8 +25,22 @@ def validar_cuit(cuit):
 
 
 def validarDesc(descripcion):
-    valido = True
-    if len(descripcion) >= 60:
+    valido = False
+    palabras = 0
+    mayusSeguidas = False
+    if len(descripcion) <= 60:
+        for car in descripcion:
+            if car == ' ' or car == '.':
+                palabras += 1
+            else:
+                if car >= 'A' and car <= 'Z' and anterior >= 'A' and anterior <= 'Z':
+                    mayusSeguidas = True
+
+            anterior = car
+        if palabras <= 3:
+            if mayusSeguidas == False:
+                valido = True
+    return valido
 
 
 def main():
