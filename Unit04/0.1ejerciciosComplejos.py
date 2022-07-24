@@ -87,7 +87,7 @@ def main():
         # consultar al usuario si desea cargar otro aviso o salir del programa.
         rsp = (input('Desea cargar otro aviso (y/n)'))
         if rsp == 'n':
-            print('Gracias por cargar el aviso!')
+            print('Gracias por cargar el aviso! ')
 
 
     #
