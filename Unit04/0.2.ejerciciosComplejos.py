@@ -1,12 +1,8 @@
-'''
-2. Secuencia 1, 2, 3
-Desarrollar un programa en Python que permita cargar por teclado una sucesión de números, uno por uno. Siempre se supone que el usuario cargará un 0(cero) para indicar el final del proceso de carga. El cero no debe considerarse un dato a procesar. El programa debe:
+'''11. Inicio y fin con vocal
+Se solicita crear un programa que permita ingresar un texto, las palabras se encontrarán separadas únicamente por espacios en blanco y el mismo debe finalizar con un punto. En base a ese texto determinar:
 
-a) Determinar cuántos de los números ingresados eran divisibles por 4.
+a) La cantidad de palabras que comienzan y terminan en vocal
 
-b) Determinar el mayor de los números impares ingresados.
+b) La cantidad de palabras que comienzan con la misma letra que terminó la palabra anterior
 
-c) Determinar cuántas veces se ingresó el primero de los números (cuente al primero).
-
-d) Determinar cuántas veces se ingresó un 1, seguido de un 2, y seguido a su vez de un 3. Por ejemplo: en la sucesión: 3, 6, 1, 2, 3, 7, 8, 2, 3, 1, 2, 3, 0 ocurrió dos veces.
-'''
+c) El porcentaje que representa el punto a) sobre el total de palabras del texto'''
