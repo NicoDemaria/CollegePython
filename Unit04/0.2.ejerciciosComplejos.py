@@ -1,31 +1,12 @@
 '''
-Desarrollar un programa en Python que permita cargar por teclado un texto completo (analizar dos opciones: una es cargar todo el texto en una variable de tipo cadena de caracteres y recorrerla con un for iterador; y la otra es cargar cada caracter uno por uno a través de un while). Siempre se supone que el usuario cargará un punto para indicar el final del texto, y que cada palabra de ese texto está separada de las demás por un espacio en blanco. El programa debe:
+2. Secuencia 1, 2, 3
+Desarrollar un programa en Python que permita cargar por teclado una sucesión de números, uno por uno. Siempre se supone que el usuario cargará un 0(cero) para indicar el final del proceso de carga. El cero no debe considerarse un dato a procesar. El programa debe:
 
-a) Determinar cuántas palabras tenían más de 4 letras.
+a) Determinar cuántos de los números ingresados eran divisibles por 4.
 
-b) Determinar cuántas palabras tenían al menos una vez la letra "x" o la letra "y".
+b) Determinar el mayor de los números impares ingresados.
 
-c) Determinar el promedio de letras por palabra en todo el texto.
+c) Determinar cuántas veces se ingresó el primero de los números (cuente al primero).
 
-d) Determinar cuántas palabras contuvieron sólo una vez la expresión "mo".
-
-********************************************************************************
-Ejemplo: 'el mono momoxy toca el xilofon.'
-********************************************************************************
-Palabras con más de 4 letras: 2
-Palabras tenían al menos una vez la letra "x" o la letra "y": 2
-El promedio de letras por palabra en todo el texto es: 4.17
-Determinar cuántas palabras contuvieron sólo una vez la expresión "mo": 1
+d) Determinar cuántas veces se ingresó un 1, seguido de un 2, y seguido a su vez de un 3. Por ejemplo: en la sucesión: 3, 6, 1, 2, 3, 7, 8, 2, 3, 1, 2, 3, 0 ocurrió dos veces.
 '''
-
-texto = str(input('Ingrese el texto'))
-
-
-def main(texto):
-    palabras4 = 0
-    for car in texto:
-
-        # Datos
-
-        # Scrip principal
-main()
