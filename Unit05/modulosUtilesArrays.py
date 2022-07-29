@@ -15,3 +15,11 @@ def selection_sort(v):
                 v[i], v[j] = v[j], v[i]
 
 # TODO búsqueda secuencial
+
+
+def linear_search(v, x):
+    for i in range(len(v)):
+        if x == v[i]:
+            return i
+
+    return -1
