@@ -23,3 +23,5 @@ def linear_search(v, x):
             return i
 
     return -1
+
+# TODO Busqueda Binaria
