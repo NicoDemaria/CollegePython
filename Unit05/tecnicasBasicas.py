@@ -39,3 +39,5 @@ def binary_search(v, x):
         else:
             izq = c + 1
     return -1
+
+# TODO Fusión de arreglos ordenados.
