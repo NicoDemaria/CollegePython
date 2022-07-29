@@ -25,3 +25,17 @@ def linear_search(v, x):
     return -1
 
 # TODO Busqueda Binaria
+
+
+def binary_search(v, x):
+    # busqueda binaria... asume arreglo ordenado...
+    izq, der = 0, len(v) - 1
+    while izq <= der:
+        c = (izq + der) // 2
+        if x == v[c]:
+            return c
+        if x < v[c]:
+            der = c - 1
+        else:
+            izq = c + 1
+    return -1
