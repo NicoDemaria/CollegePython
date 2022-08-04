@@ -51,12 +51,18 @@ def determinarTrimestre(lluviasanuales):
     return trimestre1, trimestre2, trimestre3, trimestre4
 
 
+def mesSeco(lluviasanuales):
+    seco = min(lluviasanuales)
+    return seco
+
+
 def main():
     lluviasanuales = cargalluvias()
     promedio = promedioAnual(lluviasanuales)
     selectri1, selectri2, selectri3, selectri4 = determinarTrimestre(
         lluviasanuales)
-    print(selectri4)
+    mesMenosLluvias = mesSeco(lluviasanuales)
+    print(mesMenosLluvias)
 
     return lluviasanuales
 
