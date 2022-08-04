@@ -42,12 +42,21 @@ def promedioAnual(lluviasanuales):
     return prom
 
 
-def determinarTrimestre():
+def determinarTrimestre(lluviasanuales):
+    trimestre1 = lluviasanuales[0:3]
+    trimestre2 = lluviasanuales[3:6]
+    trimestre3 = lluviasanuales[6:9]
+    trimestre4 = lluviasanuales[9:]
+
+    return trimestre1, trimestre2, trimestre3, trimestre4
 
 
 def main():
     lluviasanuales = cargalluvias()
     promedio = promedioAnual(lluviasanuales)
+    selectri1, selectri2, selectri3, selectri4 = determinarTrimestre(
+        lluviasanuales)
+    print(selectri4)
 
     return lluviasanuales
 
