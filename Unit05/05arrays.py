@@ -25,9 +25,11 @@ from __future__ import print_function
 def cargalluvias():
     lluvias = []
     for i in range(12):
-        x = input('Ingrese la cantidad de precipitaciones: ')
+        x = int(input('Ingrese la cantidad de precipitaciones: '))
         lluvias.append(x)
     return lluvias
+
+# Opcion 1
 
 
 def promedioAnual(lluviasanuales):
@@ -40,10 +42,13 @@ def promedioAnual(lluviasanuales):
     return prom
 
 
+def determinarTrimestre():
+
+
 def main():
     lluviasanuales = cargalluvias()
     promedio = promedioAnual(lluviasanuales)
-    print(promedio)
+
     return lluviasanuales
 
 
