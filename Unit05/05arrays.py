@@ -9,12 +9,10 @@ Determinar los meses del año en los que llovió más que el promedios de lluvia
 '''
 
 
-from __future__ import print_function
-
-
 def cargalluvias():
     lluvias = [0] * 12
     for i in range(len(lluvias)):
+        print(i+1)
         x = int(input('Ingrese la cantidad de precipitaciones: '))
         lluvias[i] = x
     return lluvias
@@ -32,18 +30,30 @@ def promedioAnual(lluviasanuales):
     return prom
 
 
-def determinarTrimestre(lluviasanuales):
-    trimestre1 = lluviasanuales[0:3]
-    trimestre2 = lluviasanuales[3:6]
-    trimestre3 = lluviasanuales[6:9]
-    trimestre4 = lluviasanuales[9:]
+def determinarTrimestre(lluviasanuales, opc):
+    sumador = 0
 
-    return trimestre1, trimestre2, trimestre3, trimestre4
+    if opc == 1:
+        trimestre = lluviasanuales[0:3]
+
+    elif opc == 2:
+        trimestre = lluviasanuales[3:6]
+    elif opc == 3:
+        trimestre = lluviasanuales[6:9]
+    elif opc == 4:
+        trimestre = lluviasanuales[9:]
+    for i in range(len(trimestre)):
+        sumador += trimestre[i]
+    prom = sumador/len(trimestre)
+    return prom
 
 
 def mesSeco(lluviasanuales):
-    seco = min(lluviasanuales)
-    return seco
+    min = 0
+    for i in range(len(lluviasanuales)):
+        if lluviasanuales[i] < lluviasanuales[min]:
+            min = i
+    return min
 
 
 def lluviaMayorProm(lluviasanuales, promedio):
@@ -55,28 +65,39 @@ def lluviaMayorProm(lluviasanuales, promedio):
 
 
 def main():
-    x = int(input('Ingrese una opccion'))
     lluviasanuales = cargalluvias()
+    print('''
+Determinar el promedio anual de lluvias, 1
+Determinar el promedio de lluvias para un determinado trimestre, 2
+Determinar el mes más seco del año, 3
+Determinar los meses del año en los que llovió más que el promedios de lluvia de todo el año., 4
+''')
+    x = 0
     while x != 5:
+        x = int(input('Ingrese una opcion: '))
+
         if x == 1:
             promedio = promedioAnual(lluviasanuales)
             print(promedio)
+            pass
         elif x == 2:
             opc = int(input('Ingrese el trimestre que desea: '))
-            if opc == 1:
-                print(selectri1)
-            elif opc == 2:
-                print(selectri2)
-            elif opc == 3:
-                print(selectri3)
-            elif opc == 4:
-                print(selectri4)
+            tri = determinarTrimestre(lluviasanuales, opc)
+            print(tri)
+        elif x == 3:
+            mesMenosLluvias = mesSeco(lluviasanuales)
 
-            selectri1, selectri2, selectri3, selectri4 = determinarTrimestre(
-                lluviasanuales)
+            print(mesMenosLluvias)
+        elif x == 4:
+            promedio = promedioAnual(lluviasanuales)
 
-        mesMenosLluvias = mesSeco(lluviasanuales)
-        punto4 = lluviaMayorProm(lluviasanuales, promedio)
+            punto4 = lluviaMayorProm(lluviasanuales, promedio)
+
+            print(punto4)
+        elif x == 5:
+            print('Hasta la proximaaaa :c ')
+        else:
+            print('Ingrese una opcion valida')
 
     return lluviasanuales, promedio
 
