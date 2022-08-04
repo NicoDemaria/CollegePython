@@ -7,16 +7,6 @@ Determinar el promedio de lluvias para un determinado trimestre, 2
 Determinar el mes más seco del año, 3
 Determinar los meses del año en los que llovió más que el promedios de lluvia de todo el año., 4
 '''
-# notas = []
-# for i in range(4):
-#     x = int(input('Ingrese nota: '))
-#     notas.append(x)
-# print('Notas:', notas)
-# suma = 0
-# for i in range(4):
-#     suma += notas[i]
-#     promedio = suma / 4
-# print('Promedio:', promedio)
 
 
 from __future__ import print_function
@@ -56,15 +46,24 @@ def mesSeco(lluviasanuales):
     return seco
 
 
+def lluviaMayorProm(lluviasanuales, promedio):
+    mesesHumedos = []
+    for i in range(len(lluviasanuales)):
+        if lluviasanuales[i] > promedio:
+            mesesHumedos.append(i+1)
+    return mesesHumedos
+
+
 def main():
+    x = int(input('Ingrese una opccion'))
     lluviasanuales = cargalluvias()
     promedio = promedioAnual(lluviasanuales)
     selectri1, selectri2, selectri3, selectri4 = determinarTrimestre(
         lluviasanuales)
     mesMenosLluvias = mesSeco(lluviasanuales)
-    print(mesMenosLluvias)
+    punto4 = lluviaMayorProm(lluviasanuales, promedio)
 
-    return lluviasanuales
+    return lluviasanuales, promedio
 
 
 main()
