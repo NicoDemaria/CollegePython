@@ -13,10 +13,10 @@ from __future__ import print_function
 
 
 def cargalluvias():
-    lluvias = []
-    for i in range(12):
+    lluvias = [0] * 12
+    for i in range(len(lluvias)):
         x = int(input('Ingrese la cantidad de precipitaciones: '))
-        lluvias.append(x)
+        lluvias[i] = x
     return lluvias
 
 # Opcion 1
@@ -57,11 +57,15 @@ def lluviaMayorProm(lluviasanuales, promedio):
 def main():
     x = int(input('Ingrese una opccion'))
     lluviasanuales = cargalluvias()
-    promedio = promedioAnual(lluviasanuales)
-    selectri1, selectri2, selectri3, selectri4 = determinarTrimestre(
-        lluviasanuales)
-    mesMenosLluvias = mesSeco(lluviasanuales)
-    punto4 = lluviaMayorProm(lluviasanuales, promedio)
+    while x != 5:
+        if x == 1:
+            promedio = promedioAnual(lluviasanuales)
+            print(promedio)
+
+        selectri1, selectri2, selectri3, selectri4 = determinarTrimestre(
+            lluviasanuales)
+        mesMenosLluvias = mesSeco(lluviasanuales)
+        punto4 = lluviaMayorProm(lluviasanuales, promedio)
 
     return lluviasanuales, promedio
 
