@@ -61,9 +61,20 @@ def main():
         if x == 1:
             promedio = promedioAnual(lluviasanuales)
             print(promedio)
+        elif x == 2:
+            opc = int(input('Ingrese el trimestre que desea: '))
+            if opc == 1:
+                print(selectri1)
+            elif opc == 2:
+                print(selectri2)
+            elif opc == 3:
+                print(selectri3)
+            elif opc == 4:
+                print(selectri4)
 
-        selectri1, selectri2, selectri3, selectri4 = determinarTrimestre(
-            lluviasanuales)
+            selectri1, selectri2, selectri3, selectri4 = determinarTrimestre(
+                lluviasanuales)
+
         mesMenosLluvias = mesSeco(lluviasanuales)
         punto4 = lluviaMayorProm(lluviasanuales, promedio)
 
