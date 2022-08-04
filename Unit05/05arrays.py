@@ -19,16 +19,13 @@ Determinar los meses del año en los que llovió más que el promedios de lluvia
 # print('Promedio:', promedio)
 
 
-def promedioAnual(lluviasanuales):
-    pass
+def cargalluvias():
 
-
-def main():
     lluvia = []
     for i in range(12):
         x = input('Ingrese la cantidad de precipitaciones: ')
         lluvia.append(x)
-    input('Ingrese el codigo')
 
 
-lluviasanuales = main()
+def main():
+    pass
