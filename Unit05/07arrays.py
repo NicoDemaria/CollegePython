@@ -6,7 +6,8 @@
 
 
 def main():
-    pass
+    n = int(input('Ingrese la cantidad de elementos de el vector: '))
+    vector = [0] * n
 
 
 main()
