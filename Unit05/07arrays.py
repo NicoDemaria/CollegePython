@@ -3,3 +3,10 @@
 
 # Informe cuántas veces se repite en el vector el último número ingresado
 # Genere un nuevo vector, conteniendo sólo los elementos menores al primer valor ingresado.
+
+
+def main():
+    pass
+
+
+main()
