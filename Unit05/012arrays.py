@@ -8,7 +8,7 @@ A continuación, informar:
 Los tres mejores puntajes recibidos. hecho
 Si algún jurado los calificó con un puntaje x ingresado por teclado. En caso afirmativo, mostrar las notas mayores a esa que recibieron. hecho
 La diferencia entre el mayor y el menor puntaje. hecho creo
-El puntaje total obtenido. Si es menor a 20, indicar que quedan descalificados. En caso contrario, informar como puntaje final el promedio de los puntos obtenidos, excluyendo los extremos.
+El puntaje total obtenido. Si es menor a 20, indicar que quedan descalificados. En caso contrario, informar como puntaje final el promedio de los puntos obtenidos, excluyendo los extremos. hecho
 '''
 
 import random
@@ -49,6 +49,21 @@ def dif(puntajesOrdenados):
     return c
 
 
+def porcentajeTotal(puntajesOrdenados):
+    total = 0
+    recorredorProm = puntajesOrdenados[1:5]
+    totalprom = 0
+    for i in range(len(recorredorProm)):
+        totalprom += recorredorProm[i]
+    for i in range(len(puntajesOrdenados)):
+        total += puntajesOrdenados[i]
+    promedio = totalprom//len(recorredorProm)
+    if total < 20:
+        print('El equipo queda descalificado')
+    else:
+        print('El equipo quedo calificado con un promedio de: ', promedio)
+
+
 def main():
     jurados = generarJurado()
     puntajesOrdenados = ordenarPuntos(jurados)
@@ -57,6 +72,7 @@ def main():
     busquedaPuntaje(puntajesOrdenados)
     c = dif(puntajesOrdenados)
     print('La diferencia entre el puntaje mas alto es de:', c, 'puntos')
+    porcentajeTotal(puntajesOrdenados)
 
 
 main()
