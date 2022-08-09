@@ -6,12 +6,14 @@ Para ello, generar un vector de 7 elementos, representando a los miembros del ju
 A continuación, informar:
 
 Los tres mejores puntajes recibidos. hecho
-Si algún jurado los calificó con un puntaje x ingresado por teclado. En caso afirmativo, mostrar las notas mayores a esa que recibieron.
+Si algún jurado los calificó con un puntaje x ingresado por teclado. En caso afirmativo, mostrar las notas mayores a esa que recibieron. hecho
 La diferencia entre el mayor y el menor puntaje.
 El puntaje total obtenido. Si es menor a 20, indicar que quedan descalificados. En caso contrario, informar como puntaje final el promedio de los puntos obtenidos, excluyendo los extremos.
 '''
 
 import random
+from re import I
+from traceback import print_tb
 from xml.etree.ElementTree import XML
 
 
@@ -45,12 +47,19 @@ def busquedaPuntaje(puntajesOrdenados):
             break
 
 
+def dif(puntajesOrdenados):
+    c = puntajesOrdenados[6] - puntajesOrdenados[0]
+    return c
+
+
 def main():
     jurados = generarJurado()
     puntajesOrdenados = ordenarPuntos(jurados)
     print(puntajesOrdenados)
     print('Los mejores puntajes fueron: ', puntajesOrdenados[4:7])
     busquedaPuntaje(puntajesOrdenados)
+    c = dif(puntajesOrdenados)
+    print('La diferencia entre el puntaje mas alto es de:', c, 'puntos')
 
 
 main()
