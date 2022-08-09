@@ -36,14 +36,15 @@ def ordenarPuntos(jurados):
 
 
 def busquedaPuntaje(puntajesOrdenados):
+    existe = False
     x = int(input('Ingrese un puntaje a buscar(-1:10): '))
     for i in range(len(puntajesOrdenados)):
         if puntajesOrdenados[i] == x:
-            print('El puntaje existe y es: ', x)
-            break
-        else:
-            print('El puntaje deseado no existe en el array')
-            break
+            existe = True
+            print('El puntaje existe y es:', x)
+
+    if existe == False:
+        print('No se encontro el puntaje')
 
 
 def dif(puntajesOrdenados):
