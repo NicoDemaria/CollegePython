@@ -6,7 +6,6 @@ b - Buscar en el arreglo el alumno con el legajo x, x se ingresa por teclado. Si
 
 
 import random
-from tkinter import N
 
 
 def validarN():
@@ -33,18 +32,14 @@ def ordenarLeg(legajos):
 
 
 def buscaLegajo(legajosOrdenados):
-    n = len(legajosOrdenados)
     x = int(input('Ingrese un legajo a buscar(entre 0 y 10000): '))
-    for i in range(n):
+    existe = False
+    for i in range(len(legajosOrdenados)):
         if legajosOrdenados[i] == x:
+            existe = True
             print('El legajo', x, 'esta adentro de el arreglo')
-            break
-        else:
-            print('No se encontro el legajo deseado')
-            break
-
-
-89591
+    if existe == False:
+        print('No se encontro el legajo deseado')
 
 
 def main():
